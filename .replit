@@ -1,0 +1,14 @@
+compile = "make"
+run = "make run"
+entrypoint = "main.c"
+hidden = ["app", "**/*.o", ".ccls-cache", "Makefile", "files", "gen.py", ".replit", "replit.nix", "test.sh"]
+audio = false
+
+[languages.c]
+pattern = "**/*.{c,h}"
+
+[languages.c.languageServer]
+start = "ccls"
+
+[debugger]
+support = false
